@@ -1,0 +1,321 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;0,900;1,100;1,400;1,500;1,700;1,900&family=Satisfy&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <title>Contact Us</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+
+#contact {
+  background-color: #131414;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-box {
+  width: 100%;
+  margin: 80px 50px;
+  padding-left: 420px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-links, .contact-form-wrapper {
+  width: 50%;
+  padding: 8% 5% 10% 5%;
+}
+
+
+
+
+.contact-form-wrapper {
+  background-color: #ffffff8f;
+  border-radius: 0 10px 10px 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .contact-links, .contact-form-wrapper {
+    width: 100%;
+  }
+  
+  .contact-links {
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .contact-form-wrapper {
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .contact-box {
+    width: 95%;
+    margin: 8% 5%;
+  }
+}
+
+h2 {
+  font-family: 'Arimo', sans-serif;
+  color: #fff;
+  font-size: clamp(30px, 6vw, 60px);
+  letter-spacing: 2px;
+  text-align: center;
+  transform: scale(.95, 1);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.link {
+  margin: 10px;
+  cursor: pointer;
+}
+
+img {
+  width: 45px;
+  height: 45px;
+  filter: 
+    hue-rotate(220deg)
+    drop-shadow(2px 4px 4px #0006);
+  transition: 0.2s;
+  user-select: none;
+}
+
+img:hover {
+  transform: scale(1.1, 1.1);
+}
+
+img:active {
+  transform: scale(1.1, 1.1);
+  filter: 
+    hue-rotate(220deg)
+    drop-shadow(2px 4px 4px #222)
+    sepia(0.3);
+}
+
+.form-item {
+  position: relative;
+}
+
+label, input, textarea {
+  font-family: 'Poppins', sans-serif;
+}
+
+label {
+  position: absolute;
+  top: 10px;
+  left: 2%;
+  color: #999;
+  font-size: clamp(14px, 1.5vw, 18px);
+  pointer-events: none;
+  user-select: none;
+}
+
+input, textarea {
+  width: 100%;
+  outline: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 12px;
+  font-size: clamp(15px, 1.5vw, 18px);
+}
+
+input:focus+label, 
+input:valid+label, 
+textarea:focus+label, 
+textarea:valid+label {
+  font-size: clamp(13px, 1.3vw, 16px);
+  color: #777;
+  top: -20px;
+  transition: all .225s ease;
+}
+
+.submit-btn {
+  background-color: #1a3b1d;
+  filter: drop-shadow(2px 2px 3px #0003);
+  color: #fff;
+  font-family: "Poppins",sans-serif;
+  font-size: clamp(16px, 1.6vw, 18px);
+  display: block;
+  padding: 12px 20px;
+  margin: 2px auto;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.2s;
+}
+
+.submit-btn:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.submit-btn:active {
+  transform: scale(1.1, 1.1);
+  filter: sepia(0.5);
+}
+
+@media only screen and (max-width: 800px) {
+  h2 {
+    font-size: clamp(40px, 10vw, 60px);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  h2 {
+    font-size: clamp(30px, 12vw, 60px);
+  }
+  
+  .links {
+    padding-top: 30px;
+  }
+  
+  img {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">M - MOVIES</div>
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+          <!-- USING CHECKBOX HACK -->
+          <input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+          <!-- NAVIGATION MENUS -->
+          <div class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="documentary.html">Documentaries</a></li>
+            <li class="services">
+              <a href="/">Movies</a>
+              <!-- DROPDOWN MENU -->
+              <ul class="dropdown">
+                <li><a href="action.html">Action </a></li>
+                <li><a href="comedy.html">Comedy</a></li>
+              </ul>
+            </li>
+            <li><a href="aboutus.html">About us</a></li>
+          </div>
+        </ul>
+      </nav>
+
+    <div class="container">
+        <div class="sectionIntro imgSiteIntro">
+            <h1 class="titleIntro">Contact Us.</h1>
+            <p class="textIntro">Search and stream all your favourite movies from our website.</p>
+            <button class="btnIntro">M - Movies</button>
+        </div>
+
+
+        <section id="contact">
+          <div class="contact-box">
+            <div class="contact-links">
+              <h2>CONTACT</h2>
+          
+            </div>
+            <div class="contact-form-wrapper">
+              <form>
+                <div class="form-item">
+                  <input type="text" name="sender" required>
+                  <label>Name:</label>
+                </div>
+                <div class="form-item">
+                  <input type="text" name="email" required>
+                  <label>Email:</label>
+                </div>
+                <div class="form-item">
+                  <textarea class="" name="message" required></textarea>
+                  <label>Message:</label>
+                </div>
+                <button class="submit-btn">Send</button>  
+              </form>
+            </div>
+          </div>
+        </section>
+
+       
+        
+        <footer class="footer-distributed">
+
+            <div class="footer-left">
+      
+              <IMG SRC="img/bg.jfif" ALT="" WIDTH=250 HEIGHT=100>
+      
+              <p class="footer-links">
+                <a href="index.html">Home</a> ·
+                <a href="aboutus.html">About</a> ·
+                <a href="contact.html">Contact</a>
+              </p>
+      
+              <p class="footer-company-name">Onlinemovies &copy; 2022</p>
+            </div>
+      
+            <div class="footer-center">
+      
+              <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>fairgrounds Gaborone</span> Mandela Road</p>
+              </div>
+      
+              <div>
+                <i class="fa fa-phone"></i>
+                <p>73456727</p>
+              </div>
+      
+              <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:support@company.com">support@Mmovies.com</a></p>
+              </div>
+      
+            </div>
+      
+            <div class="footer-right">
+      
+              <p class="footer-company-about">
+                <span>About Us</span> Your number 1 movie destination
+              </p>
+      
+              <div class="footer-icons">
+      
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+      
+              </div>
+      
+            </div>
+      
+          </footer>
+    </div>
+
+    
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,310 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;0,900;1,100;1,400;1,500;1,700;1,900&family=Satisfy&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <title>About</title>
+    <style>
+      /* variables for colors */
+:root {
+  --highlight-color: #375f48;
+  --white-color: #fff;
+  --text-color: #7f7f7f;
+  --dark-bg-color: #2e2e2e;
+  --light-bg-color: #fff;
+  --gray-bg-color: #666;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* services section */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  grid-template-rows: repeat(3, 200px);
+  grid-gap: 5px;
+  margin: 5px;
+}
+
+.cell {
+  background: var(--highlight-color);
+  text-align: center;
+  color: var(--white-color);
+  padding: 10px;
+}
+
+.cell h3 {
+  font-size: 1.5em;
+}
+
+.cell p {
+  line-height: 1.4em;
+}
+
+.cell-1 {
+  grid-column: 1/3;
+  grid-row: 1/3;
+  padding: 10px;
+}
+
+.cell-1 p, .cell-4 p {
+  font-size: 1.2em;
+  line-height: 1.4em;
+}
+
+.cell-1 h3, .cell-4 h3 {
+  font-size: 30px;
+}
+
+.cell-1:hover {
+  background-image: url("img/14.jpg");
+}
+
+.cell-1:hover p, .cell-1:hover h3 {
+  opacity: 0;
+  transition: 1000ms;
+}
+
+.cell-2 {
+  background-image: url("img/14.jpg");
+}
+
+.cell-2 h3, .cell-2 p {
+  opacity: 0;
+}
+
+.cell-2:hover {
+  background: var(--highlight-color);
+}
+
+.cell-2:hover h3, .cell-2:hover p {
+  opacity: 1;
+  transition: 1000ms;
+}
+
+.cell-3 {
+  background-image: url("img/14.jpg");
+}
+
+.cell-3 h3, .cell-3 p {
+  opacity: 0;
+}
+
+.cell-3:hover {
+  background: var(--highlight-color);
+}
+
+.cell-3:hover h3, .cell-3:hover p {
+  opacity: 1;
+  transition: 1000ms
+}
+
+.cell-4 {
+  grid-column: 3/5;
+  grid-row: 2/4;
+  padding: 10px;
+}
+
+.cell-4:hover {
+  background-image: url("img/14.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cell-4:hover p, .cell-4:hover h3 {
+  opacity: 0;
+  transition: 1000ms;
+}
+
+.cell-5 {
+  background-image: url("img/14.jpg");
+}
+
+.cell-5 h3, .cell-5 p {
+  opacity: 0;
+}
+
+.cell-5:hover {
+  background: var(--highlight-color);
+}
+
+.cell-5:hover h3, .cell-5:hover p {
+  opacity: 1;
+  transition: 1000ms;
+}
+
+.cell-6 {
+  background-image: url("img/14.jpg");
+}
+
+.cell-6 p, .cell-6 h3 {
+  opacity: 0;
+}
+
+.cell-6:hover {
+  background: var(--highlight-color);
+}
+
+.cell-6:hover p, .cell-6:hover h3 {
+  opacity: 1;
+  transition: 1000ms;
+}
+
+#services-section {
+  text-align: center;
+  margin-top: 30px;
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+.services-title {
+  font-size: 2em;
+  text-shadow: 1px 1px var(--text-color);
+  color: var(--highlight-color);
+}
+
+@media screen and (max-width: 768px) {
+  .services-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+    </style>
+</head>
+
+<body style="background-color: black;">
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">M - Movies</div>
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+          <!-- USING CHECKBOX HACK -->
+          <input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+          <!-- NAVIGATION MENUS -->
+          <div class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="documentary.html">Documentaries</a></li>
+            <li class="services">
+              <a href="#">Movies</a>
+              <!-- DROPDOWN MENU -->
+              <ul class="dropdown">
+                <li><a href="action.html">Action </a></li>
+                <li><a href="comedy.html">Comedy</a></li>
+              </ul>
+            </li>
+            <li><a href="aboutus.html">About us</a></li>
+          </div>
+        </ul>
+      </nav>
+
+
+      <section id="services-section"><br>
+        <h2 class="services-title">About Us</h2>
+        <div class="services-container">
+          <div class="cell cell-1">
+            <h3>Our History</h3>
+
+            <p>M - Movies comes a long way. We have been operational for the past 10 years. Founded by Mary Dipotso who at the time was a computing student at Botswana Accountancy college.
+              Our first theater was located in Mogoditshane, which was then struck by lightining, which forced us to relocate to Gaborone block 9.</p>
+          </div>
+          <div class="cell cell-2">
+            <h3>Documentaries</h3>
+            <p>If you’re looking for the best action movies in the world, you’ve come to the right place.</p>
+          </div>
+          <div class="cell cell-3">
+            <h3>Comedy</h3>
+            <p>If you’re looking for the best comedy movies in the world, you’ve come to the right place.</p>
+          </div>
+          <div class="cell cell-4">
+            <h3>The Movies</h3>
+            <p>we stream</p>
+            <p>Our theaters only stream blue rays movies, documentaries and youtube shorts, We also offer outdoor cinemas on speceal request</p>
+            <p>Our theaters only stream blue rays movies, documentaries and youtube shorts, We also offer outdoor cinemas on speceal request</p>
+          </div>
+          <div class="cell cell-5">
+            <h3>Action</h3>
+            <p>If you’re looking for the best action movies in the world, you’ve come to the right place.</p>
+          </div>
+          <div class="cell cell-6">
+            <h3>Our best theater</h3>
+            <p>Our head theater in Phakalane is by far the best theater in the country.</p>
+          </div>
+        </div>
+      </section>
+        
+        
+        <footer class="footer-distributed">
+
+            <div class="footer-left">
+      
+              <IMG SRC="img/bg.jfif" ALT="" WIDTH=150 HEIGHT=100>
+      
+              <p class="footer-links">
+                <a href="index.html">Home</a> ·
+                <a href="aboutus.html">About</a> ·
+                <a href="contact.html">Contact</a>
+              </p>
+      
+              <p class="footer-company-name">Onlinemovies &copy; 2022</p>
+            </div>
+      
+            <div class="footer-center">
+      
+              <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>fairgrounds Gaborone</span> Mandela Road</p>
+              </div>
+      
+              <div>
+                <i class="fa fa-phone"></i>
+                <p>73456727</p>
+              </div>
+      
+              <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="dipotsomary92@gmail.com">support@Mmovies.com</a></p>
+              </div>
+      
+            </div>
+      
+            <div class="footer-right">
+      
+              <p class="footer-company-about">
+                <span>About Us</span> Your number 1 movie destination
+              </p>
+      
+              <div class="footer-icons">
+      
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+      
+              </div>
+      
+            </div>
+      
+          </footer>
+        
+
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
