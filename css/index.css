@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  /* font-family: 'Courier New', Courier, monospace; */
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/*-- Navbar --*/
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: rgb(42, 63, 42);
+  color: #fff;
+ }
+ .nav-links a {
+  color: #fff;
+ }
+ /* LOGO */
+ .logo {
+  font-size: 32px;
+ }
+ /* NAVBAR MENU */
+ .menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+ }
+ .menu li:hover {
+  background-color: #4c9e9e;
+  border-radius: 5px;
+  transition: 0.3s ease;
+ }
+ .menu li {
+  padding: 5px 14px;
+ }
+ /* DROPDOWN MENU */
+ .services {
+  position: relative; 
+ }
+ .dropdown {
+  background-color: rgb(1, 139, 139);
+  padding: 1em 0;
+  position: absolute; /*WITH RESPECT TO PARENT*/
+  display: none;
+  border-radius: 8px;
+  top: 35px;
+ }
+ .dropdown li + li {
+  margin-top: 10px;
+ }
+ .dropdown li {
+  padding: 0.5em 1em;
+  width: 8em;
+  text-align: center;
+ }
+ .dropdown li:hover {
+  background-color: #4c9e9e;
+ }
+ .services:hover .dropdown {
+  display: block;
+ }
+/*-- --*/
+.container {
+  min-height: calc(100vh - 50px);
+  background: rgb(8, 10, 8);
+}
+
+.sectionIntro {
+  height: 50vh;
+  padding: 30px;
+  font-family: "Sen", sans-serif;
+}
+.sectionIntro2 {
+  height: 30vh;
+  padding: 20px;
+}
+
+.imgSiteIntro {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(8, 10, 8)),
+    url("../img/bg.jfif") no-repeat center center/cover;
+}
+
+.titleIntro {
+  font-size: 50px;
+}
+.titleIntro2 {
+  font-size: 30px;
+}
+.textIntro {
+  font-size: 22px;
+  padding: 35px 0;
+}
+
+.btnIntro {
+  padding: 15px 30px;
+  font-size: 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  color: rgb(107, 146, 28);
+  font-family: "Sen", sans-serif;
+}
+
+.movieListContainer {
+  padding: 10px 0 20px 20px;
+  overflow: hidden;
+}
+
+.titleMovieList {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.movieListWrapper {
+  position: relative;
+}
+
+.movieList {
+  display: flex;
+  height: 300px;
+  align-items: center;
+  transform: translateX(0);
+  transition: all 1s ease-in-out;
+}
+
+.movieListItem {
+  margin-right: 20px;
+  position: relative;
+}
+.movieListItem:hover .imgListItem {
+  transform: scale(1.2);
+  margin: 0 15px;
+  opacity: 0.1;
+}
+.movieListItem:hover .titleListItem,
+.movieListItem:hover .textListItem,
+.movieListItem:hover .btnListItem {
+  opacity: 1;
+  transition: all 2s ease-in-out;
+}
+
+.imgListItem {
+  width: 300px;
+  height: 180px;
+  object-fit: cover;
+  transition: all 1s ease-in-out;
+}
+
+.titleListItem {
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  font-size: 30px;
+  font-weight: bold;
+  opacity: 0;
+}
+
+.textListItem {
+  position: absolute;
+  top: 35%;
+  left: 15%;
+  right: 5%;
+  font-size: 14px;
+  opacity: 0;
+}
+
+.btnListItem {
+  position: absolute;
+  bottom: 5%;
+  left: 15%;
+  opacity: 0;
+  padding: 7px 15px;
+  background: none;
+  cursor: pointer;
+}
+
+.arrow {
+  color: white;
+  font-size: 120px;
+  position: absolute;
+  right: 1%;
+  top: 30%;
+  opacity: 0.3;
+  cursor: alias;
+}
+
+.imgDarkIntro {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(8, 10, 8)),
+    url("../img/bg.jfif") no-repeat center center/cover;
+}
+
+
+/*Navbar*/
+.navbar.active{
+    background: white;
+}
+
+.itemMenu.active,
+.textProfile span.active,
+.textProfile i.active,
+.toggleIcon.active{
+color: black !important;
+}
+
+.toggleBall.active{
+    background: white;
+    left: 1px;
+}
+
+/*Sidebar*/
+.sidebar.active{
+    background: white;
+}
+
+.sidebar i.active{
+    color: black; 
+}
+
+/*  */
+.container.active {
+    background: white;
+}
+
+.movieListContainer h1.active{
+    color: black;
+}
+
+.movieListItem.active:hover{
+    background: black;
+}
+
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+ display: none;
+} 
+/*HAMBURGER MENU*/
+.hamburger {
+ display: none;
+ font-size: 24px;
+ user-select: none;
+}
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+.menu { 
+ display:none;
+ position: absolute;
+ background-color:rgb(42, 63, 42);
+ right: 0;
+ left: 0;
+ text-align: center;
+ padding: 16px 0;
+}
+.menu li:hover {
+ display: inline-block;
+ background-color:#4c9e9e;
+ transition: 0.3s ease;
+}
+.menu li + li {
+ margin-top: 12px;
+}
+input[type=checkbox]:checked ~ .menu{
+ display: block;
+}
+.hamburger {
+ display: block;
+}
+.dropdown {
+ left: 50%;
+ top: 30px;
+ transform: translateX(35%);
+}
+.dropdown li:hover {
+ background-color: #4c9e9e;
+}
+}
